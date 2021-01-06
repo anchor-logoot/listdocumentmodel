@@ -33,12 +33,12 @@
 import { expect } from 'chai'
 import random from 'random'
 import seedrandom from 'seedrandom'
-import { BranchOrder } from '../src/listmodel/branch'
+import { BranchOrder } from '../src/branch'
 import {
   ListDocumentModel,
   Operation,
   InsertionOperation
-} from '../src/listmodel'
+} from '../src/index'
 
 /**
  * Despite these tests having 'random' input data, they **must** be the same,

@@ -7,8 +7,8 @@ import {
   DocEnd,
   LeftAnchor,
   RightAnchor
-} from '../src/listmodel/node'
-import { BranchOrder } from '../src/listmodel/branch'
+} from '../src/node'
+import { BranchOrder } from '../src/branch'
 import {
   OperationBuffer,
   constructSkipRanges,
@@ -17,7 +17,7 @@ import {
   LogootPosition,
   ListDocumentModel,
   LogootInt
-} from '../src/listmodel'
+} from '../src/index'
 
 describe('AnchorLogootNode', () => {
   let o: BranchOrder

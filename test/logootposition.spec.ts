@@ -1,10 +1,10 @@
 import { expect } from 'chai'
-import { BranchOrder } from '../src/listmodel/branch'
+import { BranchOrder } from '../src/branch'
 import {
   LogootishPosition,
   BranchOrderInconsistencyError,
   LogootPosition
-} from '../src/listmodel/position'
+} from '../src/position'
 import { ImmutableInt } from '../src/ints'
 
 describe('LogootishPosition', () => {
