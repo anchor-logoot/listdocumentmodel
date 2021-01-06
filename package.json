@@ -7,6 +7,10 @@
   "typings": "lib/index.d.ts",
   "author": "Nathan Pennie <kb1rd@kb1rd.net> [@kb1rd:kb1rd.net]",
   "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anchor-logoot/listdocumentmodel.git"
+  },
   "scripts": {
     "check-types": "tsc --noEmit",
     "check-types:watch": "yarn run type-check -- --watch",
