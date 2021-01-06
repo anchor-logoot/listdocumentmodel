@@ -8,7 +8,7 @@
 /** */
 
 import { DTstNode, CompareResult } from '@anchor-logoot/dtst-js'
-import { LogootInt } from './int'
+import { LogootInt } from './ints'
 import { LogootPosition } from './position'
 
 const DocStart = 'S'

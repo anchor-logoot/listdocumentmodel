@@ -190,4 +190,4 @@ namespace Int32 {
   }
 }
 
-export { IntType, Int32, ImmutableError, ImmutableInt }
+export { IntType, Int32, ImmutableError, ImmutableInt, Int32 as LogootInt }

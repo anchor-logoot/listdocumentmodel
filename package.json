@@ -54,7 +54,6 @@
   },
   "dependencies": {
     "@anchor-logoot/dtst-js": "^0.1.1",
-    "core-js": "^3.8.2",
-    "loglevel": "^1.7.1"
+    "core-js": "^3.8.2"
   }
 }

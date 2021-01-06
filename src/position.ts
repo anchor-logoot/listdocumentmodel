@@ -1,6 +1,6 @@
 import { Comparable, cmpResult, CompareResult } from '@anchor-logoot/dtst-js'
-import { LogootInt } from './int'
-import { FatalError } from '../utils'
+import { LogootInt } from './ints'
+import { FatalError } from './errors'
 import { BranchKey, BranchOrder } from './branch'
 
 /**
