@@ -1,5 +1,13 @@
-function test(): void {
-  console.log('Hello, world!')
-}
+/**
+ * @file This file imports the ListDocumentModel and defines event handling
+ * systems.
+ * @TODO Move event abstraction layer here
+ * @author Nathan Pennie <kb1rd@kb1rd.net>
+ */
+/** */
 
-export { test }
+export { LogootishPosition, LogootPosition } from './listmodel/position'
+
+export { ListDocumentModel, LogootInt } from './listmodel'
+
+export { BranchOrder, BranchKey } from './listmodel/branch'

@@ -1,12 +1,12 @@
 {
-  "name": "pkg-name",
+  "name": "@anchor-logoot/listdocumentmodel",
   "version": "0.1.0",
-  "description": "pkg-desc",
+  "description": "An ordered list CRDT, duplications allowed.",
   "main": "lib/index.js",
-  "types": "lib/src/index.d.ts",
-  "typings": "lib/src/index.d.ts",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
   "author": "Nathan Pennie <kb1rd@kb1rd.net> [@kb1rd:kb1rd.net]",
-  "license": "LGPL-3.0-or-later",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "check-types": "tsc --noEmit",
     "check-types:watch": "yarn run type-check -- --watch",
@@ -15,9 +15,11 @@
     "build:docs": "typedoc --mode modules --out .jsdoc src/",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "lint": "eslint src/*",
-    "test": "mocha --require ./test/babel-register.js --colors ./test/*.spec.ts",
+    "test": "yarn run test:unit; yarn run test:practical",
+    "test:unit": "mocha --require ./test/babel-register.js --colors ./test/*.spec.ts",
     "test:watch": "mocha --require ./test/babel-register.js --colors -w ./test/*.spec.ts",
-    "test:cover": "cross-env NODE_ENV=test nyc mocha --require ./test/babel-register.js --require source-map-support/register --recursive --colors ./test/*.spec.ts"
+    "test:cover": "cross-env NODE_ENV=test nyc mocha --require ./test/babel-register.js --require source-map-support/register --recursive --colors ./test/*.spec.ts",
+    "test:practical": "mocha --require ./test/babel-register.js --timeout 20000 --colors ./test/*.practical.ts"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.3",
@@ -42,7 +44,13 @@
     "mocha": "^8.0.1",
     "nyc": "^15.1.0",
     "prettier": "^2.0.5",
+    "random": "^2.2.0",
     "typedoc": "^0.19.2",
     "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@anchor-logoot/dtst-js": "^0.1.1",
+    "core-js": "^3.8.2",
+    "loglevel": "^1.7.1"
   }
 }
