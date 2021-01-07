@@ -1031,6 +1031,8 @@ class ListDocumentModel {
   }
 } */
 
+export * from './branch'
+
 export {
   LogootInt,
   LogootPosition,

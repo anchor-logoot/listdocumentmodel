@@ -23,9 +23,11 @@
     "test:unit": "mocha --require ./test/babel-register.js --colors ./test/*.spec.ts",
     "test:watch": "mocha --require ./test/babel-register.js --colors -w ./test/*.spec.ts",
     "test:cover": "cross-env NODE_ENV=test nyc mocha --require ./test/babel-register.js --require source-map-support/register --recursive --colors ./test/*.spec.ts",
+    "test:perf": "rm -rf .flamegraph; mkdir .flamegraph; for FILE in $(find test/*.perf.js); do 0x -D ./.flamegraph/$FILE -os --title \"$(node $FILE --name)\" $FILE; done",
     "test:practical": "mocha --require ./test/babel-register.js --timeout 20000 --colors ./test/*.practical.ts"
   },
   "devDependencies": {
+    "0x": "^4.10.2",
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.8.3",

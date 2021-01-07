@@ -17,7 +17,7 @@ const seedrandom = require('seedrandom')
 const {
   ListDocumentModel,
   BranchOrder
-} = require('../dist/@kb1rd/logootish-js.js')
+} = require('../lib/index.js')
 
 const settings = {
   name: 'ListDocumentModel "No Conflict" Performance Test',
