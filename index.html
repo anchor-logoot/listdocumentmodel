@@ -1,0 +1,191 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@anchor-logoot/listdocumentmodel</title>
+	<meta name="description" content="Documentation for @anchor-logoot/listdocumentmodel">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@anchor-logoot/listdocumentmodel</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>@anchor-logoot/listdocumentmodel</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#anchor-logootlistdocumentmodel" id="anchor-logootlistdocumentmodel" style="color: inherit; text-decoration: none;">
+					<h1>@anchor-logoot/listdocumentmodel</h1>
+				</a>
+				<p>This is an implementation of the AnchorLogoot algorithm from which the
+					organization derives its name. I&#39;m working on some good documentation about the
+					actual algorithm itself, but in the mean time, it&#39;s undocumented. The actual
+					datatype this represents is an ordered list that allows duplications. To create
+				a document, simply create an instance of the <code>ListDocumentModel</code> class.</p>
+				<a href="#design-philosophy" id="design-philosophy" style="color: inherit; text-decoration: none;">
+					<h2>Design Philosophy</h2>
+				</a>
+				<p>This algorithm, in contrast to others such as
+					<a href="https://github.com/automerge/automerge">Automerge</a> or
+					<a href="https://github.com/yjs/yjs">Y.js</a> is both data <em>and</em> network agnostic. This
+					means that the <code>ListDocumentModel</code> contained here can be used for any ordered
+					list that allows duplication, such as a <code>string</code>, array, or a rich text data
+					type. This <em>does</em> mean that it&#39;s up to you to perform operations on whatever
+					your data model is, but it&#39;s quite easy. However, if you want to save the state
+					(in IndexedDB or wherever), you will have to implement this yourself. If you
+					are interested in using this in your own project, <strong>please submit an issue to
+					request that I clear up the documentation.</strong> I&#39;m focusing on making the Nodepad
+				work, so docs here are not at the top of my priority list.</p>
+				<p>This codebase was forked out of
+					<a href="https://matrix-notepad.kb1rd.net">Matrix Notepad</a> and, shortly thereafter,
+					converted to TypeScript. This is by far the most complex and important part of
+				the Notepad.</p>
+				<p>The <code>ListDocumentModel</code> contains a mapping of Logootish (custom algorithm)
+					positions to text positions in the local document. It is capable of
+					bi-directional mappings. The Logoot equivalent of a local insertion is
+					determined through the <code>insertLocal</code> method and the Logoot equivalent of a
+					local removal is determined through the <code>removeLocal</code> function. The local
+					operations that must be performed for a given Logoot operation are determined
+				by the <code>insertLogoot</code> and <code>removeLogoot</code> methods, respectively.</p>
+				<p>Conflict resolution is mostly implemented, but there&#39;s a few bugs. As soon as
+					those are ironed out, it&#39;s ready to go. There will still be performance
+				improvements necessary, though.</p>
+				<a href="#development" id="development" style="color: inherit; text-decoration: none;">
+					<h2>Development</h2>
+				</a>
+				<pre><code class="language-bash">
+<span class="hljs-comment"># Install deps</span>
+yarn
+
+<span class="hljs-comment"># Check types</span>
+yarn run check-types
+
+<span class="hljs-comment"># Just lint</span>
+yarn run lint
+
+<span class="hljs-comment"># Build for production (and lint)</span>
+yarn run build
+
+<span class="hljs-comment"># Build jsdoc</span>
+yarn run build:docs
+
+<span class="hljs-comment"># Test</span>
+yarn run <span class="hljs-built_in">test</span>
+
+<span class="hljs-comment"># Test with auto reloads</span>
+yarn run <span class="hljs-built_in">test</span>:watch
+
+<span class="hljs-comment"># Get test coverage</span>
+yarn run <span class="hljs-built_in">test</span>:cover
+</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_branch_.html">&quot;branch&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_errors_.html">&quot;errors&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_index_.html">&quot;index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_ints_.html">&quot;ints&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_node_.html">&quot;node&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_position_.html">&quot;position&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

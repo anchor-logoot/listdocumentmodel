@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ListDocumentModel | @anchor-logoot/listdocumentmodel</title>
+	<meta name="description" content="Documentation for @anchor-logoot/listdocumentmodel">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@anchor-logoot/listdocumentmodel</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_index_.html">&quot;index&quot;</a>
+				</li>
+				<li>
+					<a href="_index_.listdocumentmodel.html">ListDocumentModel</a>
+				</li>
+			</ul>
+			<h1>Class ListDocumentModel</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A representation of the Logootish Document Model for mapping &quot;real,&quot;
+							continuous <code>known_position</code>s to Logoot positions. This is useful when working
+							with strings, arrays, or, just in general, anything that needs a fixed order.
+							This does not actually store the data in question, but stores a mapping of
+							real indices in the data to the Logoot positions of that element. This is
+							used to transform edits between ones in the Logoot and local position spaces.
+							One important thing to note: Logoot edits (insertions/removals) can be
+						applied in any order. Local edits <strong>must</strong> be applied in a consistent order.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">ListDocumentModel</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_index_.listdocumentmodel.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.listdocumentmodel.html#branch_order" class="tsd-kind-icon">branch_<wbr>order</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.listdocumentmodel.html#bst" class="tsd-kind-icon">bst</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.listdocumentmodel.html#max_clk" class="tsd-kind-icon">max_<wbr>clk</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_index_.listdocumentmodel.html#all_nodes" class="tsd-kind-icon">all_<wbr>nodes</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_index_.listdocumentmodel.html#insertlocal" class="tsd-kind-icon">insert<wbr>Local</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_index_.listdocumentmodel.html#insertlogoot" class="tsd-kind-icon">insert<wbr>Logoot</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_index_.listdocumentmodel.html#removelocal" class="tsd-kind-icon">remove<wbr>Local</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_index_.listdocumentmodel.html#removelogoot" class="tsd-kind-icon">remove<wbr>Logoot</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_index_.listdocumentmodel.html#selftest" class="tsd-kind-icon">self<wbr>Test</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-parent-kind-class"><a href="_index_.listdocumentmodel.html#opts" class="tsd-kind-icon">opts</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>List<wbr>Document<wbr>Model<span class="tsd-signature-symbol">(</span>branch_order<span class="tsd-signature-symbol">?: </span><a href="_branch_.branchorder.html" class="tsd-signature-type">BranchOrder</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_index_.listdocumentmodel.html" class="tsd-signature-type">ListDocumentModel</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/anchor-logoot/listdocumentmodel/blob/ab9ef35/src/index.ts#L620">src/index.ts:620</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> branch_order: <a href="_branch_.branchorder.html" class="tsd-signature-type">BranchOrder</a><span class="tsd-signature-symbol"> = new BranchOrder()</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_index_.listdocumentmodel.html" class="tsd-signature-type">ListDocumentModel</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="branch_order" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> branch_<wbr>order</h3>
+					<div class="tsd-signature tsd-kind-icon">branch_<wbr>order<span class="tsd-signature-symbol">:</span> <a href="_branch_.branchorder.html" class="tsd-signature-type">BranchOrder</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/anchor-logoot/listdocumentmodel/blob/ab9ef35/src/index.ts#L622">src/index.ts:622</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="bst" class="tsd-anchor"></a>
+					<h3>bst</h3>
+					<div class="tsd-signature tsd-kind-icon">bst<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DTst</span><span class="tsd-signature-symbol">&lt;</span><a href="_node_.anchorlogootnode.html" class="tsd-signature-type">AnchorLogootNode</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new DTst()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/anchor-logoot/listdocumentmodel/blob/ab9ef35/src/index.ts#L606">src/index.ts:606</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The BST maps out where all nodes are that are known to this document.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="max_clk" class="tsd-anchor"></a>
+					<h3>max_<wbr>clk</h3>
+					<div class="tsd-signature tsd-kind-icon">max_<wbr>clk<span class="tsd-signature-symbol">:</span> <a href="_ints_.int32.html" class="tsd-signature-type">Int32</a><span class="tsd-signature-symbol"> = new LogootInt(0)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/anchor-logoot/listdocumentmodel/blob/ab9ef35/src/index.ts#L608">src/index.ts:608</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="all_nodes" class="tsd-anchor"></a>
+					<h3>all_<wbr>nodes</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> all_nodes<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_node_.anchorlogootnode.html" class="tsd-signature-type">AnchorLogootNode</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/anchor-logoot/listdocumentmodel/blob/ab9ef35/src/index.ts#L851">src/index.ts:851</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_node_.anchorlogootnode.html" class="tsd-signature-type">AnchorLogootNode</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="insertlocal" class="tsd-anchor"></a>
+					<h3>insert<wbr>Local</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">insert<wbr>Local<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>clk<span class="tsd-signature-symbol">: </span><a href="../modules/_ints_.html#logootint" class="tsd-signature-type">LogootInt</a><span class="tsd-signature-symbol">; </span>left<span class="tsd-signature-symbol">?: </span><a href="_position_.logootposition.html" class="tsd-signature-type">LogootPosition</a><span class="tsd-signature-symbol">; </span>length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>right<span class="tsd-signature-symbol">?: </span><a href="_position_.logootposition.html" class="tsd-signature-type">LogootPosition</a><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/anchor-logoot/listdocumentmodel/blob/ab9ef35/src/index.ts#L624">src/index.ts:624</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>start: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>length: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>clk<span class="tsd-signature-symbol">: </span><a href="../modules/_ints_.html#logootint" class="tsd-signature-type">LogootInt</a><span class="tsd-signature-symbol">; </span>left<span class="tsd-signature-symbol">?: </span><a href="_position_.logootposition.html" class="tsd-signature-type">LogootPosition</a><span class="tsd-signature-symbol">; </span>length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>right<span class="tsd-signature-symbol">?: </span><a href="_position_.logootposition.html" class="tsd-signature-type">LogootPosition</a><span class="tsd-signature-symbol"> }</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>clk<span class="tsd-signature-symbol">: </span><a href="../modules/_ints_.html#logootint" class="tsd-signature-type">LogootInt</a></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> left<span class="tsd-signature-symbol">?: </span><a href="_position_.logootposition.html" class="tsd-signature-type">LogootPosition</a></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> right<span class="tsd-signature-symbol">?: </span><a href="_position_.logootposition.html" class="tsd-signature-type">LogootPosition</a></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="insertlogoot" class="tsd-anchor"></a>
+					<h3>insert<wbr>Logoot</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">insert<wbr>Logoot<span class="tsd-signature-symbol">(</span>br<span class="tsd-signature-symbol">: </span><a href="../modules/_index_.html#branchkey" class="tsd-signature-type">BranchKey</a>, left<span class="tsd-signature-symbol">: </span><a href="_position_.logootposition.html" class="tsd-signature-type">LogootPosition</a>, right<span class="tsd-signature-symbol">: </span><a href="_position_.logootposition.html" class="tsd-signature-type">LogootPosition</a>, length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, clk<span class="tsd-signature-symbol">: </span><a href="../modules/_ints_.html#logootint" class="tsd-signature-type">LogootInt</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_index_.html#operation" class="tsd-signature-type">Operation</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/anchor-logoot/listdocumentmodel/blob/ab9ef35/src/index.ts#L744">src/index.ts:744</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>br: <a href="../modules/_index_.html#branchkey" class="tsd-signature-type">BranchKey</a></h5>
+								</li>
+								<li>
+									<h5>left: <a href="_position_.logootposition.html" class="tsd-signature-type">LogootPosition</a></h5>
+								</li>
+								<li>
+									<h5>right: <a href="_position_.logootposition.html" class="tsd-signature-type">LogootPosition</a></h5>
+								</li>
+								<li>
+									<h5>length: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>clk: <a href="../modules/_ints_.html#logootint" class="tsd-signature-type">LogootInt</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_index_.html#operation" class="tsd-signature-type">Operation</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removelocal" class="tsd-anchor"></a>
+					<h3>remove<wbr>Local</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Local<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_index_.html#removal" class="tsd-signature-type">Removal</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/anchor-logoot/listdocumentmodel/blob/ab9ef35/src/index.ts#L690">src/index.ts:690</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>start: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>length: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_index_.html#removal" class="tsd-signature-type">Removal</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removelogoot" class="tsd-anchor"></a>
+					<h3>remove<wbr>Logoot</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Logoot<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><a href="_position_.logootposition.html" class="tsd-signature-type">LogootPosition</a>, length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, clk<span class="tsd-signature-symbol">: </span><a href="../modules/_ints_.html#logootint" class="tsd-signature-type">LogootInt</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_index_.html#operation" class="tsd-signature-type">Operation</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/anchor-logoot/listdocumentmodel/blob/ab9ef35/src/index.ts#L796">src/index.ts:796</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>start: <a href="_position_.logootposition.html" class="tsd-signature-type">LogootPosition</a></h5>
+								</li>
+								<li>
+									<h5>length: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>clk: <a href="../modules/_ints_.html#logootint" class="tsd-signature-type">LogootInt</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_index_.html#operation" class="tsd-signature-type">Operation</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="selftest" class="tsd-anchor"></a>
+					<h3>self<wbr>Test</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">self<wbr>Test<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/anchor-logoot/listdocumentmodel/blob/ab9ef35/src/index.ts#L859">src/index.ts:859</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>An extremely expensive operation that scans the BSTs for obvious signs of
+									corruption (empty nodes, non-continuous ldoc, out-of-order ldoc, etc.)</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>{FatalError} If any corruption detected</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class">
+					<a name="opts" class="tsd-anchor"></a>
+					<h3>opts</h3>
+					<div class="tsd-signature tsd-kind-icon">opts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/anchor-logoot/listdocumentmodel/blob/ab9ef35/src/index.ts#L617">src/index.ts:617</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An optional instance of the <code>ListDocumentModel.Logger</code> class to log all
+								operations that modify the BST (all calls to <code>_mergeNode</code>) to help with
+							bug identification when applicable.</p>
+						</div>
+					</div>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="opts.agressively_test_bst" class="tsd-anchor"></a>
+						<h3>agressively_<wbr>test_<wbr>bst</h3>
+						<div class="tsd-signature tsd-kind-icon">agressively_<wbr>test_<wbr>bst<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> = false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/anchor-logoot/listdocumentmodel/blob/ab9ef35/src/index.ts#L618">src/index.ts:618</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="opts.disable_conflicts" class="tsd-anchor"></a>
+						<h3>disable_<wbr>conflicts</h3>
+						<div class="tsd-signature tsd-kind-icon">disable_<wbr>conflicts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> = false</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/anchor-logoot/listdocumentmodel/blob/ab9ef35/src/index.ts#L619">src/index.ts:619</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_branch_.html">&quot;branch&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_errors_.html">&quot;errors&quot;</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/_index_.html">&quot;index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_ints_.html">&quot;ints&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_node_.html">&quot;node&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_position_.html">&quot;position&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_index_.html#branchkey" class="tsd-kind-icon">Branch<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_index_.html#branchorder" class="tsd-kind-icon">Branch<wbr>Order</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module">
+						<a href="_index_.listdocumentmodel.html" class="tsd-kind-icon">List<wbr>Document<wbr>Model</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_index_.listdocumentmodel.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_index_.listdocumentmodel.html#branch_order" class="tsd-kind-icon">branch_<wbr>order</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_index_.listdocumentmodel.html#bst" class="tsd-kind-icon">bst</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_index_.listdocumentmodel.html#max_clk" class="tsd-kind-icon">max_<wbr>clk</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="_index_.listdocumentmodel.html#all_nodes" class="tsd-kind-icon">all_<wbr>nodes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_index_.listdocumentmodel.html#insertlocal" class="tsd-kind-icon">insert<wbr>Local</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_index_.listdocumentmodel.html#insertlogoot" class="tsd-kind-icon">insert<wbr>Logoot</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_index_.listdocumentmodel.html#removelocal" class="tsd-kind-icon">remove<wbr>Local</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_index_.listdocumentmodel.html#removelogoot" class="tsd-kind-icon">remove<wbr>Logoot</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_index_.listdocumentmodel.html#selftest" class="tsd-kind-icon">self<wbr>Test</a>
+							</li>
+							<li class=" tsd-kind-object-literal tsd-parent-kind-class">
+								<a href="_index_.listdocumentmodel.html#opts" class="tsd-kind-icon">opts</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_index_.operationbuffer.html" class="tsd-kind-icon">Operation<wbr>Buffer</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_index_.html#insertionoperation" class="tsd-kind-icon">Insertion<wbr>Operation</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_index_.html#ldmoptions" class="tsd-kind-icon">Ldm<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_index_.html#markoperation" class="tsd-kind-icon">Mark<wbr>Operation</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_index_.html#operation" class="tsd-kind-icon">Operation</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_index_.html#removal" class="tsd-kind-icon">Removal</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_index_.html#removaloperation" class="tsd-kind-icon">Removal<wbr>Operation</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_index_.html#skiprangesearch" class="tsd-kind-icon">Skip<wbr>Range<wbr>Search</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_index_.html#conflictovernodesinrange" class="tsd-kind-icon">conflict<wbr>Over<wbr>Nodes<wbr>InRange</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_index_.html#constructskipranges" class="tsd-kind-icon">construct<wbr>Skip<wbr>Ranges</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_index_.html#fillrangeconflicts" class="tsd-kind-icon">fill<wbr>Range<wbr>Conflicts</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_index_.html#fillskipranges" class="tsd-kind-icon">fill<wbr>Skip<wbr>Ranges</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_index_.html#inserttrailingconflicts" class="tsd-kind-icon">insert<wbr>Trailing<wbr>Conflicts</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_index_.html#linkfilledskipranges" class="tsd-kind-icon">link<wbr>Filled<wbr>Skip<wbr>Ranges</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/_index_.html#reduceinferredrangeanchors" class="tsd-kind-icon">reduce<wbr>Inferred<wbr>Range<wbr>Anchors</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
